@@ -18,9 +18,9 @@ public class MenuController {
     @Autowired
     private MenuService menuService;
 
-    @GetMapping("/All")
+    @GetMapping("/all")
     public ResponseEntity<List<Menu>> allMenu(){
-        return new ResponseEntity<List<Menu>>(menuService.allItems(),HttpStatus.OK);
+        return new ResponseEntity<List<Menu>>(menuService.allItems(),HttpStatus.OK);//1:04:37
     }
 
 }
