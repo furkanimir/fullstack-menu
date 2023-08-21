@@ -5,9 +5,7 @@ import dev.furkanimir.bbmenu.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +18,34 @@ public class MenuController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Menu>> allMenu(){
-        return new ResponseEntity<List<Menu>>(menuService.allItems(),HttpStatus.OK);//1:04:37
+        return new ResponseEntity<List<Menu>>(menuService.allItems(),HttpStatus.OK);
     }
 
+    //https://www.youtube.com/watch?v=kYiLzIiHVY8 --3828
+    @PostMapping("/ekle")
+    public Menu ssave(@RequestBody Menu menu){
+        return menuService.saveDeneme(menu);
+    }
+
+
+
 }
+
+
+
+
+
+
+//itemId'yi sildim
+//    @GetMapping("/{itemId}")
+//    public ResponseEntity<Optional<Menu>> getSingleMovie(@PathVariable String itemId){
+//        return new ResponseEntity<Optional<Menu>>(menuService.findItemByItemId(itemId), HttpStatus.OK);
+//    }
+
+
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Optional<Menu>> getSingleItem(@PathVariable ObjectId id){
+//        return new ResponseEntity<Optional<Menu>>(menuService.singleItem(id),HttpStatus.OK);
+//    }
+
+

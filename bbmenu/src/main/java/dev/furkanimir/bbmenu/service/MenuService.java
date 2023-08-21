@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//https://www.youtube.com/watch?v=ssj0CGxv60k --40:55
+@Service //business logic
 public class MenuService {
 
     @Autowired
@@ -17,6 +18,19 @@ public class MenuService {
         return menuRepository.findAll();
     }
 
+    public Menu saveDeneme(Menu menu){
+        return menuRepository.save(menu);
+    }
+
+
+
+
 
 
 }
+
+//itemId'yi sildim
+//    public Optional<Menu> findItemByItemId(String itemId) {
+//        return menuRepository.findItemByItemId(itemId);
+//    }
+
