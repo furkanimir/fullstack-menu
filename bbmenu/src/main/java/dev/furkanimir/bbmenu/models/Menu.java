@@ -28,4 +28,13 @@ public class Menu {
         this.price = price;
     }
 
+    //olmazsa sil--id ile olan constructor
+//    public Menu(String id, String type, String header, String description, String img, float price) {
+//        this.id = id;
+//        this.type = type;
+//        this.header = header;
+//        this.description = description;
+//        this.img = img;
+//        this.price = price;
+//    }
 }
