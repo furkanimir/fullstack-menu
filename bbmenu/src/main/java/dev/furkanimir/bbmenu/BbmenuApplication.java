@@ -12,4 +12,5 @@ public class BbmenuApplication {
 		SpringApplication.run(BbmenuApplication.class, args);
 	}
 
+
 }
